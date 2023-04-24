@@ -6,11 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:fix": "eslint --fix ./src/* -c ./.eslintrc.json",
-    "format:fix": "prettier --write .",
-    "stylelint:fix": "stylelint \"**/**.scss\" --fix",
+    "lint": "eslint ./src/* -c ./.eslintrc.json",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write -l",
+    "stylelint": "stylelint \"**/**.scss\"",
+    "stylelint:fix": "npm run stylelint -- --fix",
     "fix": "npm run lint:fix && npm run format:fix && npm run stylelint:fix",
-    "commit": "cz"
+    "check-types": "tsc --noEmit",
+    "commit": "cz",
+    "prebuild": "npm run check-types && npm run format && npm run lint && npm run stylelint"
   },
   "dependencies": {
     "@types/node": "18.16.0",
