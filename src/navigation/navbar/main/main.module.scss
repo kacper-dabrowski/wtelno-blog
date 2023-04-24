@@ -1,0 +1,24 @@
+@import "../../../shared/styles/variables/variables";
+
+.mainContainer {
+  padding: 1rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.itemContainer {
+  padding: 0.5rem;
+
+  &.active {
+    font-weight: bold;
+    color: $primary-text-color;
+  }
+}
+
+.item {
+  text-decoration: none;
+}

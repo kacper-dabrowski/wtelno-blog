@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import "./globals.scss";
+import { MainNavbar } from "@/navigation/navbar/main/mainNavbar";
 
 export const metadata: Metadata = {
   title: "Wtelno - Oficjalna strona wsi Wtelno",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainNavbar />
+        {children}
+      </body>
     </html>
   );
 }
