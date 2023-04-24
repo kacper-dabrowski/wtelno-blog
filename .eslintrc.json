@@ -1,7 +1,32 @@
 {
-  "extends": ["next/core-web-vitals", "eslint-config-prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb-typescript",
+    "eslint-config-prettier"
+  ],
   "plugins": ["eslint-plugin-prettier"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "env": {
+    "jest": true
+  },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-console": "error",
+    "@typescript-eslint/no-use-before-define": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "test.{ts,tsx}",
+          "test-*.{ts,tsx}",
+          "**/*{.,_}{test,spec}.{ts,tsx}",
+          "**/jest.config.ts",
+          "**/jest.setup.ts"
+        ],
+        "optionalDependencies": false
+      }
+    ]
   }
 }
