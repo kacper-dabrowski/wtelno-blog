@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint:fix": "eslint --fix ./src/* -c ./.eslintrc.json",
+    "format:fix": "prettier --write .",
+    "stylelint:fix": "stylelint \"**/**.scss\" --fix",
+    "fix": "npm run lint:fix && npm run format:fix && npm run stylelint:fix",
     "commit": "cz"
   },
   "dependencies": {
@@ -21,7 +24,14 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.0",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^8.0.0"
   },
   "config": {
     "commitizen": {
