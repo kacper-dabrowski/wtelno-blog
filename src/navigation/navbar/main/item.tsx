@@ -3,8 +3,8 @@
 import { ReactComponentWithChildren } from "@/shared/types/component";
 import Link from "next/link";
 import classNames from "classnames";
-import { useRouter } from "next/router";
 import styles from "./main.module.scss";
+import { usePathname } from "next/navigation";
 
 interface MainNavbarItemProps {
   title: string;
@@ -16,8 +16,7 @@ interface MainNavbarItemProps {
 export const MainNavbarItem: ReactComponentWithChildren<
   MainNavbarItemProps
 > = ({ title, href, activeClass = styles.active, exact }) => {
-  const { pathname } = useRouter();
-
+  const pathname = usePathname();
   const isActive = exact ? pathname === href : pathname.startsWith(href);
   const containerClasses = classNames(
     { [activeClass]: isActive },

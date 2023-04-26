@@ -15,7 +15,21 @@ export class DefaultFileSystemService implements FileSystemService {
     }
   }
 
+  async getFilesInDirectory(): Promise<string[]> {
+    try {
+      const fileList = await fs.readdir(this.getDirectoryPath());
+
+      return fileList.map((fileName) => fileName.toString());
+    } catch (error) {
+      return [];
+    }
+  }
+
   private getFilePath(fileName: string) {
-    return path.join(process.cwd(), this.fileDirectoryPath, fileName);
+    return path.join(this.getDirectoryPath(), fileName);
+  }
+
+  private getDirectoryPath() {
+    return path.join(process.cwd(), this.fileDirectoryPath);
   }
 }

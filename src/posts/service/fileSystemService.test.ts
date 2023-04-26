@@ -30,6 +30,22 @@ describe("fileSystemService", () => {
     expect(content).toEqual(null);
   });
 
+  it("should return files list from directory, if directory exists", async () => {
+    givenDirectoryExists();
+
+    const fileList = await instance.getFilesInDirectory();
+
+    expect(fileList).toEqual(["file.md", "file2.md"]);
+  });
+
+  it("should return an empty array, if directory does not exist", async () => {
+    givenDirectoryDoesNotExist();
+
+    const fileList = await instance.getFilesInDirectory();
+
+    expect(fileList).toEqual([]);
+  });
+
   function givenFileWithContent() {
     jest.mocked(fs.readFile).mockResolvedValue(`#some-markdown`);
   }
@@ -37,10 +53,16 @@ describe("fileSystemService", () => {
   function givenFileDoesNotExist() {
     jest
       .mocked(fs.readFile)
-      .mockRejectedValue(
-        new Error(
-          "ENOENT: no such file or directory, open '/Users/kacperdabrowski/Documents/projects/wtelno-info-blog/content/news/test.md'"
-        )
-      );
+      .mockRejectedValue(new Error("ENOENT: no such file or directory"));
+  }
+
+  function givenDirectoryExists() {
+    (fs.readdir as jest.Mock).mockResolvedValue(["file.md", "file2.md"]);
+  }
+
+  function givenDirectoryDoesNotExist() {
+    (fs.readdir as jest.Mock).mockRejectedValue(
+      new Error("ENOENT: no such file or directory")
+    );
   }
 });

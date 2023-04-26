@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import mockedRouter from "next-router-mock";
 import { MainNavbar } from "./mainNavbar";
+import { usePathname } from "next/navigation";
+
+jest.mock("next/navigation");
 
 describe("mainNavbar", () => {
   it("renders navigation buttons", () => {
@@ -17,7 +19,7 @@ describe("mainNavbar", () => {
   });
 
   it("assigns an active class, when user is on route, that navlink navigates to", async () => {
-    mockedRouter.setCurrentUrl("/aktualnosci");
+    jest.mocked(usePathname).mockReturnValue("/aktualnosci");
     render(<MainNavbar />);
 
     expect(
