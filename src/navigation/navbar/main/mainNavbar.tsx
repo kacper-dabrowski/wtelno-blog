@@ -7,8 +7,13 @@ interface NavbarProps {}
 export const MainNavbar: ReactComponentWithChildren<NavbarProps> = () => (
   <nav className={styles["main-container"]}>
     <ul className={styles.list}>
-      <MainNavbarItem title="Strona główna" href="/" exact />
+      <MainNavbarItem title="Strona główna" href="/strona-glowna" exact />
       <MainNavbarItem title="Aktualności" href="/aktualnosci" exact />
+      <MainNavbarItem
+        title="Regulamin cmentarza"
+        href="/regulamin-cmentarza"
+        exact
+      />
     </ul>
   </nav>
 );

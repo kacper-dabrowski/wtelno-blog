@@ -1,3 +1,4 @@
-export default function Home() {
-  return <main>Hello from next.js app!</main>;
+import { redirect } from "next/navigation";
+export default async function Home() {
+  redirect("/strona-glowna");
 }
