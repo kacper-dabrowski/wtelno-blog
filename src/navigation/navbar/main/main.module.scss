@@ -1,21 +1,44 @@
 @import "../../../shared/styles/variables/variables";
 
-.mainContainer {
-  padding: 1rem;
+@mixin indicate-active {
+  background-color: white;
+  color: rgb(101, 92, 86);
+  font-weight: bold;
+}
+
+.main-container {
+  padding: .6rem;
+  background-color: rgb(101, 92, 86);
+  overflow-x:scroll;
+
+  @media (min-width:768px) {
+    overflow-x:visible;
+  }
 }
 
 .list {
+  @media (min-width:768px) {
+    justify-content: space-around;
+    width:50%;  
+  }
+  
   display: flex;
-  justify-content: space-around;
+  white-space: nowrap;
+  justify-content: flex-start;
+  gap:1rem;
   list-style: none;
 }
 
-.itemContainer {
+.item-container {
   padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  border-radius: .5rem;
 
-  &.active {
-    font-weight: bold;
-    color: $primary-text-color;
+  &.active,&:hover {
+    @include indicate-active()
+    
   }
 }
 

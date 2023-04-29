@@ -20,12 +20,12 @@ export const MainNavbarItem: ReactComponentWithChildren<
   const isActive = exact ? pathname === href : pathname.startsWith(href);
   const containerClasses = classNames(
     { [activeClass]: isActive },
-    styles.itemContainer
+    styles["item-container"]
   );
 
   return (
     <li className={containerClasses}>
-      <Link href={href} className={styles.item} legacyBehavior>
+      <Link href={href} className={styles.item}>
         {title}
       </Link>
     </li>
