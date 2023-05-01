@@ -2,30 +2,29 @@
 
 @mixin indicate-active {
   background-color: white;
-  color: rgb(101, 92, 86);
-  font-weight: bold;
+  color: rgb(101 92 86);
 }
 
 .main-container {
-  padding: .6rem;
-  background-color: rgb(101, 92, 86);
-  overflow-x:scroll;
+  padding: 0.6rem;
+  background-color: rgb(101 92 86);
+  overflow-x: scroll;
 
-  @media (min-width:768px) {
-    overflow-x:visible;
+  @media (width >= 768px) {
+    overflow-x: visible;
   }
 }
 
 .list {
-  @media (min-width:768px) {
+  @media (width >= 768px) {
     justify-content: space-around;
-    width:50%;  
+    width: 60%;
   }
-  
+
   display: flex;
   white-space: nowrap;
   justify-content: flex-start;
-  gap:1rem;
+  gap: 1rem;
   list-style: none;
 }
 
@@ -34,11 +33,11 @@
   color: white;
   text-decoration: none;
   transition: 0.5s ease-in-out;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
-  &.active,&:hover {
-    @include indicate-active()
-    
+  &.active,
+  &:hover {
+    @include indicate-active;
   }
 }
 
