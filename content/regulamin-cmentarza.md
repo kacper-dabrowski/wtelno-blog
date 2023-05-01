@@ -6,6 +6,8 @@ slug: "regulamin-cmentarza"
 
 Cmentarz jest miejscem świętym, miejscem wiecznego spoczynku naszych Zmarłych i miejscem modlitwy za nich. Ma charakter sakralny. Powinien być otoczony religijną czcią i szacunkiem oraz szczególną troską.
 
+&nbsp;
+
 ## § 1 Przepisy ogólne
 
 1. Cmentarz jest własnością **Parafii pw. Św. Michała Archanioła we Wtelnie**.
@@ -35,21 +37,21 @@ Cmentarz jest miejscem świętym, miejscem wiecznego spoczynku naszych Zmarłych
 
 9. Na cmentarzu zabrania się:
 
-a. Zakłócania ciszy, porządku i powagi miejsca
+   - Zakłócania ciszy, porządku i powagi miejsca
 
-b. Zaśmiecania terenu, niszczenia zieleni, nagrobków i urządzeń cmentarnych
+   - Zaśmiecania terenu, niszczenia zieleni, nagrobków i urządzeń cmentarnych
 
-c. Bez zgody administratora sadzenia i usuwania drzew, krzewów, ustawiania ławek i układania kostki brukowej wokół pomników
+   - Bez zgody administratora sadzenia i usuwania drzew, krzewów, ustawiania ławek i układania kostki brukowej wokół pomników
 
-d. Samodzielnego wykonywania prac budowlanych i kamieniarskich
+   - Samodzielnego wykonywania prac budowlanych i kamieniarskich
 
-e. Wrzucania gruzu i odpadów po robotach kamieniarsko-budowlanych do pojemników na śmieci
+   - Wrzucania gruzu i odpadów po robotach kamieniarsko-budowlanych do pojemników na śmieci
 
-f. Wprowadzania psów
+   - Wprowadzania psów
 
-g. Palenia tytoniu i picia alkoholu
+   - Palenia tytoniu i picia alkoholu
 
-h. Prowadzenia działalności handlowej
+   - Prowadzenia działalności handlowej
 
 10. Wykonawcy usług pogrzebowych, kamieniarskich, budowlanych ponoszą wyłączną odpowiedzialność za działania zaniechania swoich pracowników realizujących czyności na terenie cmentarza.
 
@@ -67,6 +69,8 @@ h. Prowadzenia działalności handlowej
 
 6. Istnieje możliwość rezerwacji miejsca na cmentarzu na zasadach takich jak w przypadku pokładnego (opłata na 20 lat). Przy pochówku osoby, która ma miejsce zarezerwowane, pobiera się pokładne na 20 lat, odliczając kwotę należną za lata, które jeszcze nie upłynęły, a już zostały opłacone przy rezerwacji miejsca.
 
-W sprawach nieuregulowanych regulaminem mają zastosowanie powszechnie obowiązujące przepisy, a w szczególności Ustaw z dnia 31 stycznia 1956 r. o cmentarzach i chowaniu zmarłych (Dz.U. z 2000 r. Nr 23, poz. 295 z późn. zm.) oraz Rozporządzenie Ministra Infrastruktury z dnia 7 marca 2008 r. w sprawie wymagań, jakie muszą spełniać cmentarze, groby i inne miejsca pochówku zwłok i szczątków (Dz.U. z 2008 r. Nr 48, poz. 284).
+**W sprawach nieuregulowanych regulaminem mają zastosowanie powszechnie obowiązujące przepisy, a w szczególności Ustaw z dnia 31 stycznia 1956 r. o cmentarzach i chowaniu zmarłych (Dz.U. z 2000 r. Nr 23, poz. 295 z późn. zm.) oraz Rozporządzenie Ministra Infrastruktury z dnia 7 marca 2008 r. w sprawie wymagań, jakie muszą spełniać cmentarze, groby i inne miejsca pochówku zwłok i szczątków (Dz.U. z 2008 r. Nr 48, poz. 284).**
 
-**Administrator cmentarza**
+&nbsp;
+
+_**Administrator cmentarza**_
