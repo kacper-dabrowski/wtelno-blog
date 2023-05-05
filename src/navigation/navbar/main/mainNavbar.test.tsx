@@ -6,10 +6,14 @@ import { usePathname } from "next/navigation";
 jest.mock("next/navigation");
 
 describe("mainNavbar", () => {
+  beforeEach(() => {
+    jest.mocked(usePathname).mockReturnValue("/aktualnosci");
+  });
+
   it("renders navigation buttons", () => {
     render(<MainNavbar />);
 
-    expect(getLinkWithTitle(/strona główna/i)).toBeInTheDocument();
+    expect(getNavbarLinkWithTitle(/strona główna/i)).toBeInTheDocument();
 
     expect(
       screen.getByRole("link", {
@@ -19,19 +23,13 @@ describe("mainNavbar", () => {
   });
 
   it("assigns an active class, when user is on route, that navlink navigates to", async () => {
-    jest.mocked(usePathname).mockReturnValue("/aktualnosci");
     render(<MainNavbar />);
 
-    expect(
-      screen.getByRole("link", { name: /aktualności/i }).parentElement
-    ).toHaveClass("active");
-
-    expect(getLinkWithTitle(/strona główna/i).parentElement).not.toHaveClass(
-      "active"
-    );
+    expect(getNavbarLinkWithTitle(/aktualności/i)).toHaveClass("active");
+    expect(getNavbarLinkWithTitle(/strona główna/i)).not.toHaveClass("active");
   });
 });
 
-function getLinkWithTitle(title: RegExp) {
-  return screen.getByRole("link", { name: title });
+function getNavbarLinkWithTitle(title: RegExp) {
+  return screen.getByText(title);
 }
