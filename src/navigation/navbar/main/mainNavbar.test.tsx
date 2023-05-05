@@ -14,12 +14,7 @@ describe("mainNavbar", () => {
     render(<MainNavbar />);
 
     expect(getNavbarLinkWithTitle(/strona główna/i)).toBeInTheDocument();
-
-    expect(
-      screen.getByRole("link", {
-        name: /aktualności/i,
-      })
-    );
+    expect(getNavbarLinkWithTitle(/aktualności/i)).toBeInTheDocument();
   });
 
   it("assigns an active class, when user is on route, that navlink navigates to", async () => {
