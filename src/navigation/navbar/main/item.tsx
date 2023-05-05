@@ -17,6 +17,7 @@ export const MainNavbarItem: ReactComponentWithChildren<
   MainNavbarItemProps
 > = ({ title, href, activeClass = styles.active, exact }) => {
   const pathname = usePathname();
+
   const isActive = exact ? pathname === href : pathname.startsWith(href);
   const containerClasses = classNames(
     { [activeClass]: isActive },
@@ -24,8 +25,10 @@ export const MainNavbarItem: ReactComponentWithChildren<
   );
 
   return (
-    <Link href={href} className={styles.item}>
-      <li className={containerClasses}>{title}</li>
+    <Link href={href} className={styles.item} title={title}>
+      <li className={containerClasses} role="listitem">
+        {title}
+      </li>
     </Link>
   );
 };
