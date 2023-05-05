@@ -85,7 +85,7 @@ export class CloudinaryPhotoService implements PhotoService {
             resource.public_id,
             resource.format
           ),
-          url: resource.secure_url,
+          src: resource.secure_url,
           width: resource.width,
           height: resource.height,
           fileName: resource.filename,

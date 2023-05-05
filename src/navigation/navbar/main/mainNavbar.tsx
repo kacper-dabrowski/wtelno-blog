@@ -9,6 +9,7 @@ export const MainNavbar: ReactComponentWithChildren<NavbarProps> = () => (
     <ul className={styles.list}>
       <MainNavbarItem title="Strona główna" href="/strona-glowna" exact />
       <MainNavbarItem title="Aktualności" href="/aktualnosci" exact />
+      <MainNavbarItem title="Galeria" href="/galeria" />
       <MainNavbarItem
         title="Regulamin cmentarza"
         href="/regulamin-cmentarza"

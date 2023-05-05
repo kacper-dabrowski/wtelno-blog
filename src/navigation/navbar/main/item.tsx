@@ -24,10 +24,8 @@ export const MainNavbarItem: ReactComponentWithChildren<
   );
 
   return (
-    <li className={containerClasses}>
-      <Link href={href} className={styles.item}>
-        {title}
-      </Link>
-    </li>
+    <Link href={href} className={styles.item}>
+      <li className={containerClasses}>{title}</li>
+    </Link>
   );
 };

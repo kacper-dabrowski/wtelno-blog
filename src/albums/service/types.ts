@@ -20,7 +20,7 @@ export interface AssetModel {
   path: string;
   format: string;
   fileName: string;
-  url: string;
+  src: string;
   width: number;
   height: number;
 }

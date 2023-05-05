@@ -1,10 +1,9 @@
 ---
-title: "Strona główna"
+title: "Wtelno"
 createdAt: "2023-04-27"
 slug: "strona-glowna"
 ---
 
-## W tym miejscu znajdą Państwo informacje na temat tego pięknego miejsca…
+## Serdecznie witamy na oficjalnej stronie internetowej wsi Wtelno.
 
-Wtelno – wieś w Polsce położona w województwie kujawsko-pomorskim, w powiecie bydgoskim, w gminie Koronowo, na północ od zachodnich dzielnic Bydgoszczy.
-Położenie:
+<center>Znajdą tutaj Państwo najważniejsze ogłoszenia, informacje o parafii, galerie zdjęć.</center>
