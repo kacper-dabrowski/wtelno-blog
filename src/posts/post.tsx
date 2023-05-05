@@ -19,7 +19,6 @@ export const Post: ReactComponent<PostProps> = ({ post }) => {
   return (
     <Card additionalClasses={styles.postCard}>
       <MainHeading>{post.title}</MainHeading>
-      {/* <p>{post.createdAt.toString()}</p> */}
       <ReactMarkdown
         rehypePlugins={[rehypeRaw]}
         components={{

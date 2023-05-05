@@ -1,0 +1,40 @@
+.thumbnail-container {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail-image {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: rgba(#000, 1) !important;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.thumbnail-title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translate(-50%, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.thumbnail-wrapper {
+  height: 100%;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

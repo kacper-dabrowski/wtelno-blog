@@ -1,21 +1,32 @@
-import { CloudinaryPhotoService } from "@/albums/service/cloudinaryPhotoService";
-import { v2 as cloudinary } from "cloudinary";
-import Image from "next/image";
+import { defaultCloudinaryPhotoService } from "@/albums/service/cloudinaryPhotoService";
+import { AlbumThumbnail } from "../../albums/albumThumbnail";
+import { ThumbnailsList } from "../../albums/thumbnailsList";
+
+export const revalidate = 3600;
 
 export default async function Page() {
-  const photos = await new CloudinaryPhotoService(cloudinary).getPhotosOfAlbum(
-    "test-album"
+  const albums = await defaultCloudinaryPhotoService.getAllAlbums();
+
+  if (!albums || !albums.length) {
+    return "no photos found";
+  }
+
+  const thumbnails = await Promise.all(
+    albums.map((album) =>
+      defaultCloudinaryPhotoService.getAlbumThumbnail(album)
+    )
   );
 
-  return photos.map((photo) => (
-    <Image
-      width={photo.width}
-      height={photo.height}
-      src={photo.url}
-      key={photo.url}
-      alt={photo.fileName}
-      placeholder="blur"
-      blurDataURL={photo.blurUrl}
-    />
-  ));
+  return (
+    <ThumbnailsList>
+      {thumbnails.map(([photo], index) => (
+        <AlbumThumbnail
+          key={albums[index]}
+          title={albums[index]}
+          blurUrl={photo.blurUrl}
+          fileName={photo.fileName}
+        />
+      ))}
+    </ThumbnailsList>
+  );
 }
