@@ -71,9 +71,9 @@ export class MarkdownPostService implements PostService {
 }
 
 export const newsService = new MarkdownPostService(
-  new DefaultFileSystemService("/content/news")
+  new DefaultFileSystemService("content/news")
 );
 
 export const pageService = new MarkdownPostService(
-  new DefaultFileSystemService("/content")
+  new DefaultFileSystemService("content")
 );

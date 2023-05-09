@@ -30,6 +30,6 @@ export class DefaultFileSystemService implements FileSystemService {
   }
 
   private getDirectoryPath() {
-    return path.join(process.cwd(), this.fileDirectoryPath);
+    return path.join(this.fileDirectoryPath);
   }
 }
