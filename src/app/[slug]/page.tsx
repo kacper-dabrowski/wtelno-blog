@@ -1,10 +1,15 @@
 import { Post } from "@/posts/post";
 import { pageService } from "@/posts/service/postService";
+import { getSlugsFromService } from "../../shared/params/getSlugsFromService";
 
 interface PageProps {
   params: {
     singlePage: string;
   };
+}
+
+export async function generateStaticParams() {
+  return getSlugsFromService(pageService);
 }
 
 const Page = async ({ params }: PageProps) => {
