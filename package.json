@@ -15,7 +15,7 @@
     "fix": "npm run lint:fix && npm run format:fix && npm run stylelint:fix",
     "check-types": "tsc --noEmit",
     "commit": "cz",
-    "prebuild": "npm run check-types && npm run format && npm run lint && npm run stylelint",
+    "pre-build": "npm run check-types && npm run format && npm run lint && npm run stylelint",
     "test": "jest ."
   },
   "dependencies": {
