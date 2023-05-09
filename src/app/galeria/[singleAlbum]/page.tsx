@@ -4,6 +4,7 @@ import { defaultCloudinaryPhotoService } from "../../../albums/service/cloudinar
 interface PageParams {
   params: { singleAlbum: string };
 }
+
 export const revalidate = 3600;
 export default async function Page({ params }: PageParams) {
   const photos = await defaultCloudinaryPhotoService.getPhotosOfAlbum(
