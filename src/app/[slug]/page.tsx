@@ -4,7 +4,7 @@ import { getSlugsFromService } from "../../shared/params/getSlugsFromService";
 
 interface PageProps {
   params: {
-    singlePage: string;
+    slug: string;
   };
 }
 
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 const Page = async ({ params }: PageProps) => {
-  const post = await pageService.getPostBySlug(params.singlePage);
+  const post = await pageService.getPostBySlug(params.slug);
 
   return post ? <Post post={post} /> : <div>no post found</div>;
 };
