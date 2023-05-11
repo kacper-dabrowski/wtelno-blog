@@ -21,7 +21,7 @@ export default async function Page() {
     <ThumbnailsList>
       {thumbnails.map(([photo], index) => (
         <AlbumThumbnail
-          key={albums[index]}
+          key={photo.src}
           title={albums[index]}
           blurUrl={photo.blurUrl}
           fileName={photo.fileName}

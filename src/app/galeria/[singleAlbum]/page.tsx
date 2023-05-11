@@ -1,5 +1,6 @@
 import { Photos } from "../../../albums/photos";
 import { defaultCloudinaryPhotoService } from "../../../albums/service/cloudinaryPhotoService";
+import { stringToSentence } from "../../../shared/format/format";
 
 interface PageParams {
   params: { singleAlbum: string };
@@ -10,5 +11,7 @@ export default async function Page({ params }: PageParams) {
   const photos = await defaultCloudinaryPhotoService.getPhotosOfAlbum(
     params.singleAlbum
   );
-  return <Photos photos={photos} />;
+  return (
+    <Photos photos={photos} title={stringToSentence(params.singleAlbum)} />
+  );
 }

@@ -9,23 +9,35 @@ import "yet-another-react-lightbox/styles.css";
 import styles from "./photos.module.scss";
 import { Card } from "../posts/card";
 import Image from "next/image";
+import classNames from "classnames";
+import { SecondaryHeading } from "../posts/text/text";
 
 interface PhotoGalleryProps {
   photos: AssetModel[];
+  title: string;
 }
 
-export const Photos: ReactComponent<PhotoGalleryProps> = ({ photos }) => {
+export const Photos: ReactComponent<PhotoGalleryProps> = ({
+  photos,
+  title,
+}) => {
   const [photoIndex, setPhotoIndex] = useState(-1);
 
   return (
     <Card additionalClasses={styles["photos-container"]}>
+      <SecondaryHeading additionalClasses={styles["album-title"]}>
+        {title}
+      </SecondaryHeading>
       <PhotoAlbum
         photos={photos}
         layout={"rows"}
         onClick={({ index }) => setPhotoIndex(index)}
         renderPhoto={(asset) => (
           <Image
-            className={styles["gallery-image"]}
+            className={classNames(
+              asset.imageProps.className,
+              styles["gallery-image"]
+            )}
             src={asset.photo.src}
             alt={asset.photo.fileName}
             width={asset.layout.width}
