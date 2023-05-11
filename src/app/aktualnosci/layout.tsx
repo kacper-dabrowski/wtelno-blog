@@ -1,13 +1,13 @@
 import { MainHeading } from "../../posts/text/text";
 import { ReactComponentWithChildren } from "../../shared/types/component";
 
-const Layout: ReactComponentWithChildren = ({ children }) => {
+const NewsPageLayout: ReactComponentWithChildren = ({ children }) => {
   return (
     <main>
-      <MainHeading>Galeria</MainHeading>
+      <MainHeading>Aktualności</MainHeading>
       {children}
     </main>
   );
 };
 
-export default Layout;
+export default NewsPageLayout;

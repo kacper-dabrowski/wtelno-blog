@@ -1,10 +1,15 @@
 import { newsService } from "@/posts/service/postService";
-import { PostCard } from "../../posts/postPreview";
+import { notFound } from "next/navigation";
+import { PostPreviewList } from "../../posts/postPreviewsList";
 
 export default async function NewsPage() {
   const posts = await getPostsPreview();
 
-  return posts?.map((post) => <PostCard key={post.slug} post={post} />);
+  if (!posts) {
+    return notFound();
+  }
+
+  return <PostPreviewList posts={posts} />;
 }
 
 function getPostsPreview() {

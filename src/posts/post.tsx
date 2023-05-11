@@ -18,7 +18,7 @@ interface PostProps {
 export const Post: ReactComponent<PostProps> = ({ post }) => {
   return (
     <Card additionalClasses={styles.postCard}>
-      <MainHeading>{post.title}</MainHeading>
+      <SecondaryHeading>{post.title}</SecondaryHeading>
       <ReactMarkdown
         rehypePlugins={[rehypeRaw]}
         components={{

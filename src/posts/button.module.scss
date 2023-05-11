@@ -1,0 +1,24 @@
+@mixin indicate-active() {
+  background-color: white;
+  color: rgb(101 92 86);
+  border: 1px solid rgb(101 92 86);
+}
+
+.button {
+  width: min-content;
+  white-space: nowrap;
+  background-color: rgb(101 92 86);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  border: 1px solid transparent;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    @include indicate-active;
+  }
+
+  @media (width >= 768px) {
+    padding: 1rem;
+  }
+}
