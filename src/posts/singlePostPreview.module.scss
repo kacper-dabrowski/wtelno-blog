@@ -1,0 +1,31 @@
+.postPreviewContainer {
+  width: min(80%, 1200px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  border: 1px solid rgb(101 92 86);
+  border-radius: 0.5rem;
+
+  @media (width >= 768px) {
+    border: none;
+  }
+
+  .buttonContainer {
+    justify-self: flex-start;
+  }
+
+  .postPreviewTitle {
+    color: rgb(101 92 86);
+    font-weight: bold;
+
+    @media (width >= 768px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .date {
+    color: rgb(101 92 86);
+    font-weight: bold;
+  }
+}
