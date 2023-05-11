@@ -6,3 +6,11 @@
   border-radius: 1rem;
   cursor: zoom-in;
 }
+
+.album-title {
+  margin: 1rem auto !important;
+
+  @media (width >= 768px) {
+    margin: 2rem auto !important;
+  }
+}
