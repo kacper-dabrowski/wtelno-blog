@@ -9,7 +9,9 @@ export default async function ChurchNewsPage() {
     return notFound();
   }
 
-  return <PostPreviewList baseUrl="" posts={posts} />;
+  return (
+    <PostPreviewList baseUrl="/parafia/ogloszenia-parafialne" posts={posts} />
+  );
 }
 
 function getPostsPreview() {
