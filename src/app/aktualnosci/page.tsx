@@ -9,7 +9,7 @@ export default async function NewsPage() {
     return notFound();
   }
 
-  return <PostPreviewList posts={posts} />;
+  return <PostPreviewList baseUrl="/aktualnosci" posts={posts} />;
 }
 
 function getPostsPreview() {

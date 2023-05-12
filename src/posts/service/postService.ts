@@ -77,3 +77,7 @@ export const newsService = new MarkdownPostService(
 export const pageService = new MarkdownPostService(
   new DefaultFileSystemService("content")
 );
+
+export const churchNewsService = new MarkdownPostService(
+  new DefaultFileSystemService("content/church-news")
+);
