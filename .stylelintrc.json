@@ -2,8 +2,12 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
-    "stylelint-config-css-modules"
+    "stylelint-config-css-modules",
+    "stylelint-config-rational-order",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-prettier-scss"
   ],
+  "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
   "rules": {
     "selector-class-pattern": null
   }
