@@ -7,10 +7,13 @@ import {
   MainHeading,
   OrderedList,
   ParagraphText,
+  PostImage,
   SecondaryHeading,
+  ThirdLevelHeading,
   getRendererFor,
-} from "./text/text";
+} from "./renderers/text";
 import rehypeRaw from "rehype-raw";
+import { renderImage } from "./renderers/image";
 interface PostProps {
   post: PostModel;
 }
@@ -25,7 +28,9 @@ export const Post: ReactComponent<PostProps> = ({ post }) => {
           p: getRendererFor(ParagraphText),
           h1: getRendererFor(MainHeading),
           h2: getRendererFor(SecondaryHeading),
+          h3: getRendererFor(ThirdLevelHeading),
           ol: getRendererFor(OrderedList),
+          img: (node) => renderImage(node, styles.image),
         }}
       >
         {post.content}

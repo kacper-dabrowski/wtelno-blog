@@ -34,6 +34,12 @@ export class MarkdownPostService implements PostService {
     const postContent = await this.fileSystemService.getFileContent(
       `${slug}.md`
     );
+    // const supplementalData = await this.fileSystemService.getFileContent(
+    //   `${slug}.json`
+    // );
+
+    // eslint-disable-next-line no-console
+    // console.log({ supplementalData });
 
     if (!postContent) {
       return null;

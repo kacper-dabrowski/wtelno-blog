@@ -1,5 +1,5 @@
 import { Card } from "../../posts/card";
-import { SecondaryHeading } from "../../posts/text/text";
+import { SecondaryHeading } from "../../posts/renderers/text";
 import styles from "./singleAlbum.module.scss";
 import { AlbumSkeleton } from "./skeleton";
 

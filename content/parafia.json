@@ -1,0 +1,50 @@
+{
+    "parson": {
+        "email": "jar-rad55@wp.pl",
+        "name": "Jarosław Radzikowski",
+        "telephoneNumber": "+48 603 977 027",
+        "title": "Proboszcz Parafii"
+    },
+    "bankAccount": {
+        "name": "Parafia Rzymsko-Katolicka p.w Św. Michała Archanioła, ul. Kościelna 2, 86-011 Wtelno",
+        "title": "Darowizna na cele kultu religijnego. Imię i nazwisko (np. Jan Kowalski)",
+        "accountNumber": "80 8144 0005 2001 0000 3753 0005"
+    },
+    "importantDates": [
+        {
+            "title": "Odpust",
+            "description": "29 września"
+        },
+        {
+            "title": "Data Erygowania Parafii",
+            "description": "1876 r."
+        },
+        {
+            "title": "Wieczysta Adoracja",
+            "description": "20 maja"
+        }
+    ],
+    "massesPlans": [
+        {
+            "title": "Niedziela i święta",
+            "plan": [
+                "8:00",
+                "10:00",
+                "11:30"
+            ]
+        },
+        {
+            "title": "Zniesione w święta",
+            "plan": [
+                "10:00",
+                "18:00 (zimą godz. 17:00)"
+            ]
+        },
+        {
+            "title": "Dni powszednie",
+            "plan": [
+                "18:00 (zimą godz. 17:00)"
+            ]
+        }
+    ]
+}

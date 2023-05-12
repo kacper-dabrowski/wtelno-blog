@@ -2,7 +2,7 @@ import { PostPreviewModel } from "@/posts/service/types";
 import Link from "next/link";
 import styles from "./singlePostPreview.module.scss";
 import { Card } from "./card";
-import { ParagraphText } from "./text/text";
+import { ParagraphText } from "./renderers/text";
 import { ReadWholePostButton } from "./button";
 
 interface PostCardProps {

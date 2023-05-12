@@ -10,7 +10,7 @@ import styles from "./photos.module.scss";
 import { Card } from "../posts/card";
 import Image from "next/image";
 import classNames from "classnames";
-import { SecondaryHeading } from "../posts/text/text";
+import { SecondaryHeading } from "../posts/renderers/text";
 
 interface PhotoGalleryProps {
   photos: AssetModel[];
