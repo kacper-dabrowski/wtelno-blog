@@ -1,14 +1,14 @@
 @import "../../../shared/styles/variables/variables";
 
 @mixin indicate-active {
-  background-color: white;
   color: rgb(101 92 86);
+  background-color: $color-white;
 }
 
 .main-container {
   padding: 0.6rem 1rem;
-  background-color: rgb(101 92 86);
   overflow-x: scroll;
+  background-color: rgb(101 92 86);
 
   @media (width >= 768px) {
     overflow-x: hidden;
@@ -21,17 +21,17 @@
   }
 
   display: flex;
-  white-space: nowrap;
   gap: 1rem;
+  white-space: nowrap;
   list-style: none;
 }
 
 .item-container {
   padding: 0.5rem;
-  color: white;
+  color: $color-white;
   text-decoration: none;
-  transition: 0.5s ease-in-out;
   border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
 
   &.active,
   &:hover {

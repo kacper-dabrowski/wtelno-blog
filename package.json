@@ -53,12 +53,17 @@
     "jest-environment-jsdom": "^29.5.0",
     "jest-when": "^3.5.2",
     "next-router-mock": "^0.9.3",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "sass": "^1.62.0",
     "stylelint": "^15.6.0",
     "stylelint-config-css-modules": "^4.2.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-config-standard": "^33.0.0",
-    "stylelint-config-standard-scss": "^8.0.0"
+    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-order": "^6.0.3"
   },
   "config": {
     "commitizen": {

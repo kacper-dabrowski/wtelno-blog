@@ -1,17 +1,19 @@
+@import "../shared/styles/variables/variables";
+
 @mixin indicate-active() {
-  background-color: white;
   color: rgb(101 92 86);
+  background-color: $color-white;
   border: 1px solid rgb(101 92 86);
 }
 
 .button {
   width: min-content;
+  padding: 0.5rem;
+  color: $color-white;
   white-space: nowrap;
   background-color: rgb(101 92 86);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  color: white;
   border: 1px solid transparent;
+  border-radius: 0.5rem;
   transition: ease-in-out 0.2s;
 
   &:hover {

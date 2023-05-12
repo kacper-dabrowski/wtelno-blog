@@ -1,8 +1,8 @@
 .container {
-  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-basis: 10rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
