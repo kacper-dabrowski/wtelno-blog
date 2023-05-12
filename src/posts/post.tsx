@@ -1,19 +1,18 @@
 import { PostModel } from "@/posts/service/types";
 import { ReactComponent } from "@/shared/types/component";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { Card } from "./card";
 import styles from "./post.module.scss";
+import { renderImage } from "./renderers/image";
 import {
   MainHeading,
   OrderedList,
   ParagraphText,
-  PostImage,
   SecondaryHeading,
   ThirdLevelHeading,
   getRendererFor,
 } from "./renderers/text";
-import rehypeRaw from "rehype-raw";
-import { renderImage } from "./renderers/image";
 interface PostProps {
   post: PostModel;
 }
