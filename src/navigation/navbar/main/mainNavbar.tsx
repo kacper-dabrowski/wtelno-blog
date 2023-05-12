@@ -15,6 +15,11 @@ export const MainNavbar: ReactComponentWithChildren<NavbarProps> = () => (
         href="/regulamin-cmentarza"
         exact
       />
+      <MainNavbarItem
+        title="Ogłoszenia parafialne"
+        href="/parafia/ogloszenia-parafialne"
+        exact
+      />
     </ul>
   </nav>
 );

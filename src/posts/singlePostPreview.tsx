@@ -7,9 +7,10 @@ import { ReadWholePostButton } from "./button";
 
 interface PostCardProps {
   post: PostPreviewModel;
+  baseUrl: string;
 }
 
-export const SinglePostPreview = ({ post }: PostCardProps) => (
+export const SinglePostPreview = ({ post, baseUrl }: PostCardProps) => (
   <Card additionalClasses={styles.postPreviewContainer}>
     <ParagraphText additionalClasses={styles.postPreviewTitle}>
       {post.title}
@@ -21,7 +22,7 @@ export const SinglePostPreview = ({ post }: PostCardProps) => (
       </span>
     </ParagraphText>
     <div className={styles.buttonContainer}>
-      <Link href={`/aktualnosci/${post.slug}`}>
+      <Link href={`${baseUrl}/${post.slug}`}>
         <ReadWholePostButton>Przeczytaj całość</ReadWholePostButton>
       </Link>
     </div>
