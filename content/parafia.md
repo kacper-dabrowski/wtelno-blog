@@ -4,7 +4,6 @@ createdAt: "2023-04-27"
 slug: "parafia"
 ---
 
-
 ### Historia parafii Wtelno
 
 Cystersi około 1470 roku zakładają we Wtelnie osobną parafię wyłączając ją z byszewskiej lub koronowskiej. Z jej założeniem wiąże się następująca legenda:

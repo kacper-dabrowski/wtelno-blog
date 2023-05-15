@@ -1,5 +1,5 @@
 import { PostModel } from "@/posts/service/types";
-import { ReactComponent, Renderable } from "@/shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Card } from "../../../shared/components/card/card";
