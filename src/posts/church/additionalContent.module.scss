@@ -1,0 +1,29 @@
+@import "../../shared/styles/variables/variables";
+
+.parsonInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0.5rem;
+
+  @media (width >= 768px) {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid $primary-text-color;
+    border-radius: 0.5rem;
+  }
+
+  .name {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.25rem;
+  }
+}

@@ -1,18 +1,31 @@
-import { ReactComponent } from "../../shared/types/component";
+/* eslint-disable @next/next/no-img-element */
 import { ParagraphText } from "../renderers/text";
-import { Parson } from "./dto";
+import styles from "./additionalContent.module.scss";
 
 interface ParsonDataProps {
-  parson: Parson;
+  parson: {
+    name: string;
+    title: string;
+  };
+  emailImageUrl: string;
+  telephoneNumberImageUrl: string;
 }
-export const ParsonData: ReactComponent<ParsonDataProps> = ({ parson }) => {
+
+export const ParsonData = ({
+  parson,
+  emailImageUrl,
+  telephoneNumberImageUrl,
+}: ParsonDataProps) => {
   return (
-    <div>
-      <ParagraphText>
+    <div className={styles.parsonInfo}>
+      <ParagraphText additionalClasses={styles.name}>
         {parson.title} {parson.name}
       </ParagraphText>
-      <ParagraphText>Nr telefonu: {parson.telephoneNumber}</ParagraphText>
-      <ParagraphText>Email: {parson.email}</ParagraphText>
+      <div className={styles.contact}>
+        <ParagraphText>Dane kontaktowe:</ParagraphText>
+        <img src={telephoneNumberImageUrl} alt="nr kontaktowy do proboszcza" />
+        <img src={emailImageUrl} alt="email kontaktowy do proboszcza" />
+      </div>
     </div>
   );
 };
