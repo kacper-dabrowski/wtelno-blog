@@ -4,7 +4,6 @@ import { ChurchAdditionalContentDto } from "./dto";
 import { HolyMasses } from "./holyMasses";
 import { ImportantDatesList } from "./importantDates";
 import { ParsonData } from "./parsonData";
-import { generate } from "text-to-image";
 
 export const getChurchContentBeforePost: () => Promise<
   (() => JSX.Element) | undefined
@@ -18,18 +17,13 @@ export const getChurchContentBeforePost: () => Promise<
     return undefined;
   }
 
-  const { telephoneNumberImageUrl, email } = await getParsonDataImages({
-    telephoneNumber: content.parson.telephoneNumber,
-    email: content.parson.email,
-  });
-
   return function ChurchContent() {
     return (
       <section>
         <ParsonData
           parson={content.parson}
-          emailImageUrl={email}
-          telephoneNumberImageUrl={telephoneNumberImageUrl}
+          emailImageUrl={"/static/email.png"}
+          telephoneNumberImageUrl={"/static/phoneNumber.png"}
         />
         <HolyMasses plans={content.massesPlans} />
         <BankAccountDetailsList {...content.bankAccount} />
@@ -38,21 +32,3 @@ export const getChurchContentBeforePost: () => Promise<
     );
   };
 };
-
-async function getParsonDataImages({
-  telephoneNumber,
-  email,
-}: {
-  telephoneNumber: string;
-  email: string;
-}) {
-  const options = {
-    maxWidth: 160,
-    lineHeight: 16,
-  };
-
-  return {
-    telephoneNumberImageUrl: await generate(telephoneNumber, options),
-    email: await generate(email, options),
-  };
-}
