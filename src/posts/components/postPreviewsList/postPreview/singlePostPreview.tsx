@@ -1,9 +1,9 @@
 import { PostPreviewModel } from "@/posts/service/types";
 import Link from "next/link";
 import styles from "./singlePostPreview.module.scss";
-import { Card } from "./card";
-import { ParagraphText } from "./renderers/text";
-import { ReadWholePostButton } from "./button";
+import { Card } from "../../../../shared/components/card/card";
+import { ParagraphText } from "../../../renderers/text";
+import { ReadWholePostButton } from "../../../../shared/components/button/button";
 
 interface PostCardProps {
   post: PostPreviewModel;

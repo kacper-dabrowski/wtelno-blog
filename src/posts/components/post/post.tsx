@@ -1,10 +1,9 @@
 import { PostModel } from "@/posts/service/types";
-import { ReactComponent } from "@/shared/types/component";
+import { ReactComponent, Renderable } from "@/shared/types/component";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Card } from "./card";
-import styles from "./post.module.scss";
-import { renderImage } from "./renderers/image";
+import { Card } from "../../../shared/components/card/card";
+import { renderImage } from "../../renderers/image";
 import {
   MainHeading,
   OrderedList,
@@ -12,15 +11,22 @@ import {
   SecondaryHeading,
   ThirdLevelHeading,
   getRendererFor,
-} from "./renderers/text";
+} from "../../renderers/text";
+import styles from "./post.module.scss";
+
 interface PostProps {
   post: PostModel;
+  renderContentBefore?: () => JSX.Element;
 }
 
-export const Post: ReactComponent<PostProps> = ({ post }) => {
+export const Post: ReactComponent<PostProps> = ({
+  post,
+  renderContentBefore,
+}) => {
   return (
     <Card additionalClasses={styles.postCard}>
       <SecondaryHeading>{post.title}</SecondaryHeading>
+      {renderContentBefore ? renderContentBefore() : null}
       <ReactMarkdown
         rehypePlugins={[rehypeRaw]}
         components={{

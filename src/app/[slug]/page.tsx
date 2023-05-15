@@ -1,4 +1,4 @@
-import { Post } from "@/posts/post";
+import { Post } from "@/posts/components/post/post";
 import { pageService } from "@/posts/service/postService";
 import { getSlugsFromService } from "../../shared/params/getSlugsFromService";
 

@@ -5,16 +5,16 @@ export const stringToSentence = (text: string): string => {
   );
 };
 
-const applyTextTransformations = (
+function applyTextTransformations(
   transformationArray: Array<(text: string) => string>,
   text: string
-): string => {
+): string {
   const textToTransform = text;
 
   return transformationArray.reduce((str, transform) => {
     return transform(str);
   }, textToTransform);
-};
+}
 
 function insertSpacesInsteadOfHyphens(text: string): string {
   return text.replace(/-/g, " ");

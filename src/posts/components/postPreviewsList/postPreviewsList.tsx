@@ -1,6 +1,6 @@
-import { ReactComponentWithChildren } from "../shared/types/component";
-import { SinglePostPreview } from "./singlePostPreview";
-import { PostPreviewModel } from "./service/types";
+import { ReactComponentWithChildren } from "../../../shared/types/component";
+import { SinglePostPreview } from "./postPreview/singlePostPreview";
+import { PostPreviewModel } from "../../service/types";
 import styles from "./postPreviewsList.module.scss";
 
 interface PostPreviewListProps {
