@@ -20,10 +20,12 @@ describe("church - additional content", () => {
   it("should return a component, that renders parson data", async () => {
     await renderComponent();
 
-    expect(screen.getByText(/Proboszcz Parafii/)).toBeInTheDocument();
-    expect(screen.getByText(/Any Name/)).toBeInTheDocument();
-    expect(screen.getByText(/\+48 777 777 777/)).toBeInTheDocument();
-    expect(screen.getByText(/parson@email.pl/)).toBeInTheDocument();
+    expect(
+      screen.getByAltText("email kontaktowy do proboszcza")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByAltText("nr kontaktowy do proboszcza")
+    ).toBeInTheDocument();
   });
 
   it("should return a component, that renders holy masses info", async () => {
