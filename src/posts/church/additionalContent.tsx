@@ -47,7 +47,7 @@ async function getParsonDataImages({
   email: string;
 }) {
   const options = {
-    maxWidth: 200,
+    maxWidth: 160,
     lineHeight: 16,
   };
 
