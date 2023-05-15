@@ -1,11 +1,32 @@
 import { ReactComponentWithChildren } from "@/shared/types/component";
-import styles from "./text.module.scss";
 import classNames from "classnames";
 import React, { PropsWithChildren } from "react";
+import styles from "./renderers.module.scss";
 
 interface WithAdditionalClasses {
   additionalClasses?: string;
 }
+
+const getHeadingRenderer: (
+  level: 1 | 2 | 3
+) => ReactComponentWithChildren<WithAdditionalClasses> = (level) => {
+  function Component({
+    children,
+    additionalClasses,
+  }: React.PropsWithChildren<WithAdditionalClasses>) {
+    return React.createElement(
+      `h${level}`,
+      {
+        className: classNames(styles.heading, additionalClasses),
+      },
+      children
+    );
+  }
+
+  Component.displayName = `custom-h${level}`;
+
+  return Component;
+};
 
 export const ParagraphText: ReactComponentWithChildren<
   WithAdditionalClasses
@@ -15,22 +36,11 @@ export const ParagraphText: ReactComponentWithChildren<
   return <p className={classes}>{children}</p>;
 };
 
-export const MainHeading: ReactComponentWithChildren<WithAdditionalClasses> = ({
-  children,
-  additionalClasses,
-}) => {
-  const classes = classNames(styles.heading, additionalClasses);
+export const MainHeading = getHeadingRenderer(1);
 
-  return <h1 className={classes}>{children}</h1>;
-};
+export const SecondaryHeading = getHeadingRenderer(2);
 
-export const SecondaryHeading: ReactComponentWithChildren<
-  WithAdditionalClasses
-> = ({ children, additionalClasses }) => {
-  const classes = classNames(styles.heading, additionalClasses);
-
-  return <h2 className={classes}>{children}</h2>;
-};
+export const ThirdLevelHeading = getHeadingRenderer(3);
 
 export const OrderedList: ReactComponentWithChildren = ({ children }) => {
   return <ol className={styles["ordered-list"]}>{children}</ol>;

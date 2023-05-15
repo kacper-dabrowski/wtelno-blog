@@ -1,6 +1,6 @@
 import { newsService } from "@/posts/service/postService";
 import { notFound } from "next/navigation";
-import { PostPreviewList } from "../../posts/postPreviewsList";
+import { PostPreviewList } from "../../posts/components/postPreviewsList/postPreviewsList";
 
 export default async function NewsPage() {
   const posts = await getPostsPreview();

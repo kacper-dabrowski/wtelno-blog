@@ -1,5 +1,5 @@
 import { HtmlHTMLAttributes } from "react";
-import { ReactComponentWithChildren } from "../shared/types/component";
+import { ReactComponentWithChildren } from "../../types/component";
 import styles from "./button.module.scss";
 import classNames from "classnames";
 
