@@ -9,6 +9,9 @@ class AdditionalContentService {
       `${slug}.json`
     );
 
+    // eslint-disable-next-line no-console
+    console.log({ contentJson });
+
     if (!contentJson) {
       return null;
     }
