@@ -53,3 +53,15 @@
     }
   }
 }
+
+.bankAccountDetails {
+  @include content-container;
+
+  gap: 1rem;
+
+  .label {
+    margin-bottom: 0.25rem;
+    color: $primary-text-color;
+    font-weight: 700;
+  }
+}
