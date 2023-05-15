@@ -8,9 +8,15 @@
   margin: 1rem auto;
   padding: 0.5rem;
   text-align: center;
+  @include apply-border;
 
   @media (width >=768px) {
     width: 80%;
+  }
+}
+
+@mixin apply-border {
+  @media (width >=768px) {
     border: 1px solid $primary-text-color;
     border-radius: 0.5rem;
   }
@@ -58,9 +64,36 @@
   @include content-container;
 
   gap: 1rem;
+  margin: 2rem auto;
 
   .label {
     margin-bottom: 0.25rem;
+    color: $primary-text-color;
+    font-weight: 700;
+  }
+}
+
+.importantDates {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 80%;
+  margin: auto;
+  margin: 1rem auto 2rem;
+
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    @include apply-border;
+  }
+
+  .dateTitle {
+    color: $primary-text-color;
+  }
+
+  .dateDescription {
     color: $primary-text-color;
     font-weight: 700;
   }
