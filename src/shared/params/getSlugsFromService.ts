@@ -1,4 +1,4 @@
-import { MarkdownPostService } from "../../posts/service/postService";
+import { MarkdownPostService } from "@/posts/service/postService";
 
 interface PageParams {
   slug: string;

@@ -1,8 +1,8 @@
 import {
   fakeFileSystemService,
   getFakePostContent,
-} from "../../posts/service/fakeFileSystemService";
-import { MarkdownPostService } from "../../posts/service/postService";
+} from "@/posts/service/fakeFileSystemService";
+import { MarkdownPostService } from "@/posts/service/postService";
 import { getSlugsFromService } from "./getSlugsFromService";
 
 describe("getSlugsFromService", () => {

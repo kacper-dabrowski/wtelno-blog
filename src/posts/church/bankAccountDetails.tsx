@@ -1,4 +1,4 @@
-import { ReactComponent } from "../../shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import { BankAccountDetails } from "./dto";
 import styles from "./additionalContent.module.scss";
 import { ParagraphText, ThirdLevelHeading } from "../renderers/text";

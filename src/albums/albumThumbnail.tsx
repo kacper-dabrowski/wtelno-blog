@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { ReactComponent } from "../shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import styles from "./thumbnail.module.scss";
 import Link from "next/link";
-import { stringToSentence } from "../shared/format/format";
+import { stringToSentence } from "@/shared/format/format";
 
 interface ThumbnailProps {
   title: string;

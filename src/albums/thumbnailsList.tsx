@@ -1,4 +1,4 @@
-import { ReactComponentWithChildren } from "../shared/types/component";
+import { ReactComponentWithChildren } from "@/shared/types/component";
 import styles from "./thumbnail.module.scss";
 
 export const ThumbnailsList: ReactComponentWithChildren = ({ children }) => (

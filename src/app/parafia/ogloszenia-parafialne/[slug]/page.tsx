@@ -1,6 +1,6 @@
 import { Post } from "@/posts/components/post/post";
 import { churchNewsService } from "@/posts/service/postService";
-import { getSlugsFromService } from "../../../../shared/params/getSlugsFromService";
+import { getSlugsFromService } from "@/shared/params/getSlugsFromService";
 
 interface PageProps {
   params: {

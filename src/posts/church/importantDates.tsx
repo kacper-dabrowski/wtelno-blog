@@ -1,4 +1,4 @@
-import { ReactComponent } from "../../shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import { ImportantDate } from "./dto";
 import styles from "./additionalContent.module.scss";
 import { ThirdLevelHeading } from "../renderers/text";

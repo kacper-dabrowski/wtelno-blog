@@ -1,6 +1,6 @@
 import { defaultCloudinaryPhotoService } from "@/albums/service/cloudinaryPhotoService";
-import { AlbumThumbnail } from "../../albums/albumThumbnail";
-import { ThumbnailsList } from "../../albums/thumbnailsList";
+import { AlbumThumbnail } from "@/albums/albumThumbnail";
+import { ThumbnailsList } from "@/albums/thumbnailsList";
 
 export const revalidate = 3600;
 

@@ -2,8 +2,7 @@ import { PostModel } from "@/posts/service/types";
 import { ReactComponent } from "@/shared/types/component";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Card } from "../../../shared/components/card/card";
-import { renderImage } from "../../renderers/image";
+import { Card } from "@/shared/components/card/card";
 import {
   MainHeading,
   OrderedList,
@@ -35,7 +34,6 @@ export const Post: ReactComponent<PostProps> = ({
           h2: getRendererFor(SecondaryHeading),
           h3: getRendererFor(ThirdLevelHeading),
           ol: getRendererFor(OrderedList),
-          img: (node) => renderImage(node, styles.image),
         }}
       >
         {post.content}

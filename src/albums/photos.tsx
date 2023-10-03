@@ -1,16 +1,16 @@
 "use client";
 
-import { ReactComponent } from "../shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import PhotoAlbum from "react-photo-album";
 import { AssetModel } from "./service/types";
 import Lightbox from "yet-another-react-lightbox";
 import { useState } from "react";
 import "yet-another-react-lightbox/styles.css";
 import styles from "./photos.module.scss";
-import { Card } from "../shared/components/card/card";
+import { Card } from "@/shared/components/card/card";
 import Image from "next/image";
 import classNames from "classnames";
-import { SecondaryHeading } from "../posts/renderers/text";
+import { SecondaryHeading } from "@/posts/renderers/text";
 
 interface PhotoGalleryProps {
   photos: AssetModel[];

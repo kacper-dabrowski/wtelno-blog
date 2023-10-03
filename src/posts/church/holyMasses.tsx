@@ -1,4 +1,4 @@
-import { ReactComponent } from "../../shared/types/component";
+import { ReactComponent } from "@/shared/types/component";
 import { MassesPlan } from "./dto";
 import styles from "./additionalContent.module.scss";
 import { ParagraphText } from "../renderers/text";

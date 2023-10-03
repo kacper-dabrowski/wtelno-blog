@@ -1,14 +1,9 @@
 import { cloudinaryConfig } from "@/shared/config/cloudinary";
 import { v2 as cloudinary } from "cloudinary";
 import { AssetModel, CloudinaryDto, PhotoService } from "./types";
-import { CustomCacheProvider } from "../../shared/cache/cache";
-import { DefaultCacheProvider } from "../../shared/cache/provider";
-import { InMemoryCache } from "../../shared/cache/inMemory";
-
-export interface CloudinaryClient {
-  search: typeof cloudinary.search;
-  config: typeof cloudinary.config;
-}
+import { CustomCacheProvider } from "@/shared/cache/cache";
+import { DefaultCacheProvider } from "@/shared/cache/provider";
+import { InMemoryCache } from "@/shared/cache/inMemory";
 
 export class CloudinaryPhotoService implements PhotoService {
   constructor(
@@ -33,7 +28,7 @@ export class CloudinaryPhotoService implements PhotoService {
       return [];
     }
 
-    const folders = (response.resources as Array<{ folder: string }>).reduce<
+    return (response.resources as Array<{ folder: string }>).reduce<
       Array<string>
     >((allFolders, currentAsset) => {
       if (allFolders.includes(currentAsset.folder) || !currentAsset.folder) {
@@ -44,8 +39,6 @@ export class CloudinaryPhotoService implements PhotoService {
 
       return allFolders;
     }, []);
-
-    return folders;
   }
 
   async getAlbumThumbnail(albumName: string): Promise<AssetModel[]> {

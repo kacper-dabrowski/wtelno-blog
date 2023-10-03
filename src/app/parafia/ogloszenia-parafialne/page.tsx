@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { PostPreviewList } from "../../../posts/components/postPreviewsList/postPreviewsList";
-import { churchNewsService } from "../../../posts/service/postService";
+import { PostPreviewList } from "@/posts/components/postPreviewsList/postPreviewsList";
+import { churchNewsService } from "@/posts/service/postService";
 
 export default async function ChurchNewsPage() {
   const posts = await getPostsPreview();

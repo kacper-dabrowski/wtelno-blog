@@ -13,9 +13,7 @@ class AdditionalContentService {
       return null;
     }
 
-    const parsedContent = JSON.parse(contentJson);
-
-    return parsedContent;
+    return JSON.parse(contentJson);
   }
 }
 
