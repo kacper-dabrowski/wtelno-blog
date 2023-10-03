@@ -14,4 +14,5 @@ Początkowo wybudowano w tym miejscu kaplicę, a następnie mały kościółek z
 <img src="/static/images/Kosciol_Parafialny_1908.jpg" alt="alt_text" height=280 width=400>
 
 <strong><center>Kościół Parafialny 1908 r.</center></strong>
+
 Wieża jest wysoka na 43 metry, panuje nad całą okolicą i jest prawdziwą ozdobą kościoła na zewnątrz. We wieży umieszczony jest zegar z tarczami na cztery strony świata. Były także dzwony, pięknie zharmonizowane na a, cis, e, fis. Zostały one dla swojej wysokiej wartości muzycznej zwolnione od wydania na cele wojenne w czasie I wojny światowej, niestety w kilkanaście lat później hitlerowscy barbarzyńcy nie oszczędzili ich i dzwony przepadły.

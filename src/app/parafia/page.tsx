@@ -12,7 +12,5 @@ export default async function ChurchPage() {
 
   const renderContent = await getChurchContentBeforePost();
 
-  return (
-    <Post renderContentBefore={renderContent ?? undefined} post={pageContent} />
-  );
+  return <Post renderContentBefore={renderContent} post={pageContent} />;
 }

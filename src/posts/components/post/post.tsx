@@ -12,6 +12,7 @@ import {
   getRendererFor,
 } from "../../renderers/text";
 import styles from "./post.module.scss";
+import { renderImage } from "@/posts/renderers/image";
 
 interface PostProps {
   post: PostModel;
@@ -34,6 +35,7 @@ export const Post: ReactComponent<PostProps> = ({
           h2: getRendererFor(SecondaryHeading),
           h3: getRendererFor(ThirdLevelHeading),
           ol: getRendererFor(OrderedList),
+          img: (node) => renderImage(node, styles.image),
         }}
       >
         {post.content}
