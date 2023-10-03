@@ -13,7 +13,6 @@ describe("mainNavbar", () => {
   it("renders navigation buttons", () => {
     render(<MainNavbar />);
 
-    expect(getNavbarLinkWithTitle(/strona główna/i)).toBeInTheDocument();
     expect(getNavbarLinkWithTitle(/aktualności/i)).toBeInTheDocument();
   });
 
@@ -21,7 +20,7 @@ describe("mainNavbar", () => {
     render(<MainNavbar />);
 
     expect(getNavbarLinkWithTitle(/aktualności/i)).toHaveClass("active");
-    expect(getNavbarLinkWithTitle(/strona główna/i)).not.toHaveClass("active");
+    expect(getNavbarLinkWithTitle(/galeria/i)).not.toHaveClass("active");
   });
 });
 

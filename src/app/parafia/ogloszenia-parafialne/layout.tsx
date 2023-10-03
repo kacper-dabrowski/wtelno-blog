@@ -1,5 +1,5 @@
-import { MainHeading } from "../../../posts/text/text";
-import { ReactComponentWithChildren } from "../../../shared/types/component";
+import { MainHeading } from "@/posts/renderers/text";
+import { ReactComponentWithChildren } from "@/shared/types/component";
 
 const NewsPageLayout: ReactComponentWithChildren = ({ children }) => {
   return (

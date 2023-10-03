@@ -6,8 +6,10 @@ jest.mock("fs/promises");
 describe("fileSystemService", () => {
   let instance: DefaultFileSystemService;
   const baseDirectoryPath = "/content/news";
+  let oldEnvs = { ...process.env };
 
   beforeEach(() => {
+    process.env = oldEnvs;
     instance = new DefaultFileSystemService("/content/news");
   });
 
@@ -38,6 +40,19 @@ describe("fileSystemService", () => {
     expect(fileList).toEqual(["file.md", "file2.md"]);
   });
 
+  it("should omit files with defined excluded words", async () => {
+    process.env = {
+      ...oldEnvs,
+      FILE_READER_EXCLUDED_WORDS: "example,test",
+    };
+
+    givenDirectoryExists(["file1.md", "example.md", "test.md"]);
+
+    const fileList = await instance.getFilesInDirectory();
+
+    expect(fileList).toEqual(["file1.md"]);
+  });
+
   it("should return an empty array, if directory does not exist", async () => {
     givenDirectoryDoesNotExist();
 
@@ -56,8 +71,8 @@ describe("fileSystemService", () => {
       .mockRejectedValue(new Error("ENOENT: no such file or directory"));
   }
 
-  function givenDirectoryExists() {
-    (fs.readdir as jest.Mock).mockResolvedValue(["file.md", "file2.md"]);
+  function givenDirectoryExists(files = ["file.md", "file2.md"]) {
+    (fs.readdir as jest.Mock).mockResolvedValue(files);
   }
 
   function givenDirectoryDoesNotExist() {

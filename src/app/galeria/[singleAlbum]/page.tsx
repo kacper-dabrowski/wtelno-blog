@@ -1,6 +1,6 @@
-import { Photos } from "../../../albums/photos";
-import { defaultCloudinaryPhotoService } from "../../../albums/service/cloudinaryPhotoService";
-import { stringToSentence } from "../../../shared/format/format";
+import { Photos } from "@/albums/photos";
+import { defaultCloudinaryPhotoService } from "@/albums/service/cloudinaryPhotoService";
+import { stringToSentence } from "@/shared/format/format";
 
 interface PageParams {
   params: { singleAlbum: string };

@@ -9,6 +9,7 @@
   ],
   "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
   "rules": {
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "max-nesting-depth": 2
   }
 }

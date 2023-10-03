@@ -1,25 +1,19 @@
 import { ReactComponentWithChildren } from "@/shared/types/component";
 import { MainNavbarItem } from "./item";
 import styles from "./main.module.scss";
+import { routes } from "./routes";
 
-interface NavbarProps {}
-
-export const MainNavbar: ReactComponentWithChildren<NavbarProps> = () => (
+export const MainNavbar: ReactComponentWithChildren = () => (
   <nav className={styles["main-container"]}>
     <ul className={styles.list}>
-      <MainNavbarItem title="Strona główna" href="/strona-glowna" exact />
-      <MainNavbarItem title="Aktualności" href="/aktualnosci" exact />
-      <MainNavbarItem title="Galeria" href="/galeria" />
-      <MainNavbarItem
-        title="Regulamin cmentarza"
-        href="/regulamin-cmentarza"
-        exact
-      />
-      <MainNavbarItem
-        title="Ogłoszenia parafialne"
-        href="/parafia/ogloszenia-parafialne"
-        exact
-      />
+      {routes.map(({ title, href, hasSubpages }) => (
+        <MainNavbarItem
+          title={title}
+          href={href}
+          exact={hasSubpages}
+          key={href}
+        />
+      ))}
     </ul>
   </nav>
 );

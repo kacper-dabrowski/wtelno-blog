@@ -1,0 +1,98 @@
+@import "../../shared/styles/variables/variables";
+
+@mixin content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  text-align: center;
+
+  @media (width >=768px) {
+    @include apply-border;
+
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+}
+
+@mixin apply-border {
+  border: 1px solid $primary-text-color;
+  border-radius: 0.5rem;
+}
+
+.parsonInfo {
+  @include content-container;
+
+  @media (width >= 768px) {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .name {
+    color: $primary-text-color;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.25rem;
+    font-weight: bold;
+  }
+}
+
+.massesPlanList {
+  @include content-container;
+
+  gap: 1rem;
+
+  .plan {
+    text-align: center;
+
+    .title {
+      margin-bottom: 0.5rem;
+      color: $primary-text-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.bankAccountDetails {
+  @include content-container;
+
+  gap: 1rem;
+  margin: 2rem auto;
+
+  .label {
+    margin-bottom: 0.25rem;
+    color: $primary-text-color;
+    font-weight: 700;
+  }
+}
+
+.importantDates {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem auto 2rem;
+
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    @include apply-border;
+  }
+
+  .dateTitle {
+    color: $primary-text-color;
+  }
+
+  .dateDescription {
+    color: $primary-text-color;
+    font-weight: 700;
+  }
+}

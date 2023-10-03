@@ -1,3 +1,5 @@
+import React from "react";
+
 interface NoProps {}
 
 export type ReactComponent<T = NoProps> = (props: T) => JSX.Element;
