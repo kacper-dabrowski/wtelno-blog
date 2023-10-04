@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./singlePostPreview.module.scss";
 import { Card } from "@/shared/components/card/card";
 import { ParagraphText } from "@/posts/renderers/text";
-import { ReadWholePostButton } from "@/shared/components/button/button";
+import { PrimaryButton } from "@/shared/components/button/button";
 
 interface PostCardProps {
   post: PostPreviewModel;
@@ -23,7 +23,7 @@ export const SinglePostPreview = ({ post, baseUrl }: PostCardProps) => (
     </ParagraphText>
     <div className={styles.buttonContainer}>
       <Link href={`${baseUrl}/${post.slug}`}>
-        <ReadWholePostButton>Przeczytaj całość</ReadWholePostButton>
+        <PrimaryButton>Przeczytaj całość</PrimaryButton>
       </Link>
     </div>
   </Card>

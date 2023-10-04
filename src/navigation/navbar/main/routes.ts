@@ -8,4 +8,5 @@ export const routes = [
     href: "/parafia/ogloszenia-parafialne",
     hasSubpages: true,
   },
+  { title: "Kontakt", href: "/kontakt" },
 ];
