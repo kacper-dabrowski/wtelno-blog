@@ -1,0 +1,32 @@
+.input {
+  width: 100%;
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid rgb(238 238 238);
+  border-left: 0;
+  outline: 0;
+  transition: ease-in-out 0.2s;
+
+  &:focus {
+    border-bottom: 2px solid rgb(101 92 86);
+  }
+}
+
+.label {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  width: 100%;
+  place-items: center;
+}
+
+.textarea{
+  resize: vertical;
+}

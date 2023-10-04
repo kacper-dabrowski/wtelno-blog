@@ -3,14 +3,16 @@ import styles from "./button.module.scss";
 import classNames from "classnames";
 import { WithChildren } from "../../types/component";
 
-interface ReadWholePostButtonProps {
+interface PrimaryButtonProps {
   buttonProps?: HtmlHTMLAttributes<HTMLButtonElement>;
   additionalClasses?: string;
 }
 
-export const ReadWholePostButton: FC<
-  WithChildren<ReadWholePostButtonProps>
-> = ({ buttonProps = {}, children, additionalClasses }) => {
+export const PrimaryButton: FC<WithChildren<PrimaryButtonProps>> = ({
+  buttonProps = {},
+  children,
+  additionalClasses,
+}) => {
   const classes = classNames(styles.button, additionalClasses);
 
   return (
