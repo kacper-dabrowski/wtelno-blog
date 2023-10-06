@@ -1,14 +1,15 @@
 "use client";
 
-import { Card } from "@/shared/components/card/card";
-import styles from "./contact.module.scss";
-import { getRendererFor, MainHeading } from "@/posts/renderers/text";
 import { ContactInput } from "@/contact/components/input";
+import { getRendererFor, MainHeading } from "@/posts/renderers/text";
 import { PrimaryButton } from "@/shared/components/button/button";
+import { Card } from "@/shared/components/card/card";
+import { config } from "../shared/config/config";
+import styles from "./contact.module.scss";
 
 const Header = getRendererFor(MainHeading);
 
-export const Contact = () => {
+export const ContactForm = () => {
   return (
     <>
       <Header>Formularz kontaktowy</Header>
@@ -16,7 +17,7 @@ export const Contact = () => {
         <form
           className={styles.wrapper}
           method={"POST"}
-          action={process.env.CONTACT_FORM_URL}
+          action={config.contact.formUrl}
         >
           <ContactInput
             required
@@ -36,11 +37,11 @@ export const Contact = () => {
             name={"content"}
             label={"Treść wiadomości"}
             title={"Treść wiadomości"}
-            type={"textarea"}
+            textArea
           />
           <PrimaryButton
-            buttonProps={{ onSubmit: () => {} }}
             additionalClasses={styles.button}
+            buttonProps={{ "aria-label": "Wyślij" }}
           >
             Wyślij
           </PrimaryButton>
