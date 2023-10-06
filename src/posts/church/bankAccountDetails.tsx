@@ -1,13 +1,15 @@
-import { ReactComponent } from "@/shared/types/component";
-import { BankAccountDetails } from "./dto";
-import styles from "./additionalContent.module.scss";
+import { FC } from "react";
 import { ParagraphText, ThirdLevelHeading } from "../renderers/text";
+import styles from "./additionalContent.module.scss";
+import { BankAccountDetails } from "./dto";
 
 interface BankAccountDetailsProps extends BankAccountDetails {}
 
-export const BankAccountDetailsList: ReactComponent<
-  BankAccountDetailsProps
-> = ({ name, title, accountNumber }) => {
+export const BankAccountDetailsList: FC<BankAccountDetailsProps> = ({
+  name,
+  title,
+  accountNumber,
+}) => {
   return (
     <section className={styles.bankAccountDetails}>
       <ThirdLevelHeading>Dane parafialnego konta bankowego</ThirdLevelHeading>

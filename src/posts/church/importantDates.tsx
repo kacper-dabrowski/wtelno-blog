@@ -1,14 +1,12 @@
-import { ReactComponent } from "@/shared/types/component";
-import { ImportantDate } from "./dto";
-import styles from "./additionalContent.module.scss";
+import { FC } from "react";
 import { ThirdLevelHeading } from "../renderers/text";
+import styles from "./additionalContent.module.scss";
+import { ImportantDate } from "./dto";
 interface ImportantDatesListProps {
   dates: ImportantDate[];
 }
 
-export const ImportantDatesList: ReactComponent<ImportantDatesListProps> = ({
-  dates,
-}) => (
+export const ImportantDatesList: FC<ImportantDatesListProps> = ({ dates }) => (
   <div className={styles.importantDates}>
     <ThirdLevelHeading>Ważne daty</ThirdLevelHeading>
     {renderImportantDates(dates)}

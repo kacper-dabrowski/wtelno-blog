@@ -1,9 +1,9 @@
-import { ReactComponentWithChildren } from "@/shared/types/component";
+import { FC } from "react";
 import { MainNavbarItem } from "./item";
 import styles from "./main.module.scss";
 import { routes } from "./routes";
 
-export const MainNavbar: ReactComponentWithChildren = () => (
+export const MainNavbar: FC = () => (
   <nav className={styles["main-container"]}>
     <ul className={styles.list}>
       {routes.map(({ title, href, hasSubpages }) => (

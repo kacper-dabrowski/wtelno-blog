@@ -1,12 +1,12 @@
-import { ReactComponent } from "@/shared/types/component";
 import { MassesPlan } from "./dto";
 import styles from "./additionalContent.module.scss";
 import { ParagraphText } from "../renderers/text";
+import { FC } from "react";
 interface HolyMassesListProps {
   plans: MassesPlan[];
 }
 
-export const HolyMasses: ReactComponent<HolyMassesListProps> = ({ plans }) => (
+export const HolyMasses: FC<HolyMassesListProps> = ({ plans }) => (
   <div className={styles.massesPlanList}>{renderPlans(plans)}</div>
 );
 

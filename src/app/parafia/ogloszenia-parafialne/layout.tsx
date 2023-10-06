@@ -1,7 +1,8 @@
 import { MainHeading } from "@/posts/renderers/text";
-import { ReactComponentWithChildren } from "@/shared/types/component";
+import { FC } from "react";
+import { WithChildren } from "../../../shared/types/component";
 
-const NewsPageLayout: ReactComponentWithChildren = ({ children }) => {
+const NewsPageLayout: FC<WithChildren> = ({ children }) => {
   return (
     <main>
       <MainHeading>Ogłoszenia parafialne</MainHeading>

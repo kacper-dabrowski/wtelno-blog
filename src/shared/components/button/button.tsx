@@ -1,15 +1,15 @@
-import { HtmlHTMLAttributes } from "react";
-import { ReactComponentWithChildren } from "../../types/component";
+import { FC, HtmlHTMLAttributes } from "react";
 import styles from "./button.module.scss";
 import classNames from "classnames";
+import { WithChildren } from "../../types/component";
 
 interface ReadWholePostButtonProps {
   buttonProps?: HtmlHTMLAttributes<HTMLButtonElement>;
   additionalClasses?: string;
 }
 
-export const ReadWholePostButton: ReactComponentWithChildren<
-  ReadWholePostButtonProps
+export const ReadWholePostButton: FC<
+  WithChildren<ReadWholePostButtonProps>
 > = ({ buttonProps = {}, children, additionalClasses }) => {
   const classes = classNames(styles.button, additionalClasses);
 

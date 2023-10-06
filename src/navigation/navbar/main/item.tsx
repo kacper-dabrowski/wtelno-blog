@@ -1,10 +1,10 @@
 "use client";
 
-import { ReactComponentWithChildren } from "@/shared/types/component";
-import Link from "next/link";
 import classNames from "classnames";
-import styles from "./main.module.scss";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FC } from "react";
+import styles from "./main.module.scss";
 
 interface MainNavbarItemProps {
   title: string;
@@ -13,9 +13,12 @@ interface MainNavbarItemProps {
   exact?: boolean;
 }
 
-export const MainNavbarItem: ReactComponentWithChildren<
-  MainNavbarItemProps
-> = ({ title, href, activeClass = styles.active, exact }) => {
+export const MainNavbarItem: FC<MainNavbarItemProps> = ({
+  title,
+  href,
+  activeClass = styles.active,
+  exact,
+}) => {
   const pathname = usePathname();
 
   const isActive = exact ? pathname === href : pathname.startsWith(href);

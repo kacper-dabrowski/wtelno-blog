@@ -1,7 +1,7 @@
-import { ReactComponentWithChildren } from "@/shared/types/component";
 import classNames from "classnames";
-import React, { PropsWithChildren } from "react";
+import React, { FC, PropsWithChildren } from "react";
 import styles from "./renderers.module.scss";
+import { WithChildren } from "../../shared/types/component";
 
 interface WithAdditionalClasses {
   additionalClasses?: string;
@@ -9,7 +9,7 @@ interface WithAdditionalClasses {
 
 const getHeadingRenderer: (
   level: 1 | 2 | 3
-) => ReactComponentWithChildren<WithAdditionalClasses> = (level) => {
+) => FC<WithChildren<WithAdditionalClasses>> = (level) => {
   function Component({
     children,
     additionalClasses,
@@ -28,9 +28,10 @@ const getHeadingRenderer: (
   return Component;
 };
 
-export const ParagraphText: ReactComponentWithChildren<
-  WithAdditionalClasses
-> = ({ children, additionalClasses }) => {
+export const ParagraphText: FC<WithChildren<WithAdditionalClasses>> = ({
+  children,
+  additionalClasses,
+}) => {
   const classes = classNames(styles.paragraph, additionalClasses);
 
   return <p className={classes}>{children}</p>;
@@ -42,12 +43,14 @@ export const SecondaryHeading = getHeadingRenderer(2);
 
 export const ThirdLevelHeading = getHeadingRenderer(3);
 
-export const OrderedList: ReactComponentWithChildren = ({ children }) => {
+export const OrderedList: FC<WithChildren<WithAdditionalClasses>> = ({
+  children,
+}) => {
   return <ol className={styles["ordered-list"]}>{children}</ol>;
 };
 
 export const getRendererFor =
-  (Node: ReactComponentWithChildren, additionalProps: any = {}) =>
+  (Node: FC<WithChildren>, additionalProps: any = {}) =>
   // eslint-disable-next-line react/display-name
   (element: PropsWithChildren) =>
     <Node {...additionalProps}>{element.children}</Node>;
