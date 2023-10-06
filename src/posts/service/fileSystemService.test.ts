@@ -1,3 +1,4 @@
+import { overrideEnvs, restoreEnvs } from "../../shared/test/env";
 import { DefaultFileSystemService } from "./fileSystemService";
 import fs from "fs/promises";
 
@@ -6,11 +7,13 @@ jest.mock("fs/promises");
 describe("fileSystemService", () => {
   let instance: DefaultFileSystemService;
   const baseDirectoryPath = "/content/news";
-  let oldEnvs = { ...process.env };
 
   beforeEach(() => {
-    process.env = oldEnvs;
     instance = new DefaultFileSystemService("/content/news");
+  });
+
+  afterEach(() => {
+    restoreEnvs();
   });
 
   it("should get file content for given directory and filename", async () => {
@@ -41,10 +44,7 @@ describe("fileSystemService", () => {
   });
 
   it("should omit files with defined excluded words", async () => {
-    process.env = {
-      ...oldEnvs,
-      FILE_READER_EXCLUDED_WORDS: "example,test",
-    };
+    overrideEnvs({ FILE_READER_EXCLUDED_WORDS: "example,test" });
 
     givenDirectoryExists(["file1.md", "example.md", "test.md"]);
 
