@@ -1,12 +1,13 @@
-import { ReactComponentWithChildren } from "@/shared/types/component";
+import { FC } from "react";
 import styles from "./card.module.scss";
 import classNames from "classnames";
+import { WithChildren } from "../../types/component";
 
 interface CardProps {
   additionalClasses?: string;
 }
 
-export const Card: ReactComponentWithChildren<CardProps> = ({
+export const Card: FC<WithChildren<CardProps>> = ({
   children,
   additionalClasses,
 }) => {

@@ -1,26 +1,22 @@
 "use client";
 
-import { ReactComponent } from "@/shared/types/component";
+import { SecondaryHeading } from "@/posts/renderers/text";
+import { Card } from "@/shared/components/card/card";
+import classNames from "classnames";
+import Image from "next/image";
+import { FC, useState } from "react";
 import PhotoAlbum from "react-photo-album";
-import { AssetModel } from "./service/types";
 import Lightbox from "yet-another-react-lightbox";
-import { useState } from "react";
 import "yet-another-react-lightbox/styles.css";
 import styles from "./photos.module.scss";
-import { Card } from "@/shared/components/card/card";
-import Image from "next/image";
-import classNames from "classnames";
-import { SecondaryHeading } from "@/posts/renderers/text";
+import { AssetModel } from "./service/types";
 
 interface PhotoGalleryProps {
   photos: AssetModel[];
   title: string;
 }
 
-export const Photos: ReactComponent<PhotoGalleryProps> = ({
-  photos,
-  title,
-}) => {
+export const Photos: FC<PhotoGalleryProps> = ({ photos, title }) => {
   const [photoIndex, setPhotoIndex] = useState(-1);
 
   return (

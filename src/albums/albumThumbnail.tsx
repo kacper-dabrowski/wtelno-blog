@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { ReactComponent } from "@/shared/types/component";
-import styles from "./thumbnail.module.scss";
-import Link from "next/link";
 import { stringToSentence } from "@/shared/format/format";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import styles from "./thumbnail.module.scss";
 
 interface ThumbnailProps {
   title: string;
@@ -10,7 +10,7 @@ interface ThumbnailProps {
   fileName: string;
 }
 
-export const AlbumThumbnail: ReactComponent<ThumbnailProps> = ({
+export const AlbumThumbnail: FC<ThumbnailProps> = ({
   blurUrl,
   fileName,
   title,

@@ -1,7 +1,8 @@
 import { MainHeading } from "@/posts/renderers/text";
-import { ReactComponentWithChildren } from "@/shared/types/component";
+import { FC } from "react";
+import { WithChildren } from "../../shared/types/component";
 
-const Layout: ReactComponentWithChildren = ({ children }) => {
+const Layout: FC<WithChildren> = ({ children }) => {
   return (
     <main>
       <MainHeading>Galeria</MainHeading>

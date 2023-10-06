@@ -1,6 +1,6 @@
-import { ReactComponentWithChildren } from "@/shared/types/component";
-import { SinglePostPreview } from "./postPreview/singlePostPreview";
+import { FC } from "react";
 import { PostPreviewModel } from "../../service/types";
+import { SinglePostPreview } from "./postPreview/singlePostPreview";
 import styles from "./postPreviewsList.module.scss";
 
 interface PostPreviewListProps {
@@ -8,9 +8,10 @@ interface PostPreviewListProps {
   baseUrl: string;
 }
 
-export const PostPreviewList: ReactComponentWithChildren<
-  PostPreviewListProps
-> = ({ posts, baseUrl }) => {
+export const PostPreviewList: FC<PostPreviewListProps> = ({
+  posts,
+  baseUrl,
+}) => {
   return (
     <div className={styles.container}>
       {posts.map((post) => (
