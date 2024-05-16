@@ -12,5 +12,5 @@ W ramach dofinansowania z Rządowego Programu Odbudowy Zabytków.
 
 [Kliknij tutaj aby pobrać zapytanie ofertowe](/static/documents/zapytanie-ofertowe-15052024.pdf)<br>
 [Kliknij tutaj aby pobrać załączniki](/static/documents/zalacznik15.pdf)<br>
-[Kliknij tutaj aby pobrać ogłoszenie BIP gminy](/static/documents/ogłoszenie-bip-gminy.pdf)<br>
+[Kliknij tutaj aby pobrać ogłoszenie BIP gminy](/static/documents/ogloszenie-bip-gminy.pdf)<br>
 [Kliknij tutaj aby pobrać projekt umowy](/static/documents/zalacznik-projekt-umowy.pdf)<br>
