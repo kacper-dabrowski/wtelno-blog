@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { FC, PropsWithChildren } from "react";
-import styles from "./renderers.module.scss";
 import { WithChildren } from "../../shared/types/component";
+import styles from "./renderers.module.scss";
 
 interface WithAdditionalClasses {
   additionalClasses?: string;
@@ -49,8 +49,24 @@ export const OrderedList: FC<WithChildren<WithAdditionalClasses>> = ({
   return <ol className={styles["ordered-list"]}>{children}</ol>;
 };
 
+export const ExternalAnchorTag: FC<PropsWithChildren> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <a className={styles.link} target="_blank" {...props}>
+      {children}
+    </a>
+  );
+};
+
 export const getRendererFor =
   (Node: FC<WithChildren>, additionalProps: any = {}) =>
   // eslint-disable-next-line react/display-name
-  (element: PropsWithChildren) =>
-    <Node {...additionalProps}>{element.children}</Node>;
+  (element: PropsWithChildren<Record<string, any>>) => {
+    return (
+      <Node {...element?.node?.properties} {...additionalProps}>
+        {element.children}
+      </Node>
+    );
+  };
