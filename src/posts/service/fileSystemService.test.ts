@@ -1,12 +1,14 @@
+import * as fs from "fs/promises";
 import { overrideEnvs, restoreEnvs } from "../../shared/test/env";
 import { DefaultFileSystemService } from "./fileSystemService";
-import fs from "fs/promises";
 
 jest.mock("fs/promises");
 
 describe("fileSystemService", () => {
   let instance: DefaultFileSystemService;
   const baseDirectoryPath = "/content/news";
+  const readDirSpy = jest.spyOn(fs, "readdir");
+  const readFileSpy = jest.spyOn(fs, "readFile");
 
   beforeEach(() => {
     instance = new DefaultFileSystemService("/content/news");
@@ -62,21 +64,21 @@ describe("fileSystemService", () => {
   });
 
   function givenFileWithContent() {
-    jest.mocked(fs.readFile).mockResolvedValue(`#some-markdown`);
+    readFileSpy.mockResolvedValue(`#some-markdown`);
   }
 
   function givenFileDoesNotExist() {
-    jest
-      .mocked(fs.readFile)
-      .mockRejectedValue(new Error("ENOENT: no such file or directory"));
+    readFileSpy.mockRejectedValue(
+      new Error("ENOENT: no such file or directory")
+    );
   }
 
   function givenDirectoryExists(files = ["file.md", "file2.md"]) {
-    (fs.readdir as jest.Mock).mockResolvedValue(files);
+    readDirSpy.mockResolvedValue(files as any);
   }
 
   function givenDirectoryDoesNotExist() {
-    (fs.readdir as jest.Mock).mockRejectedValue(
+    readDirSpy.mockRejectedValue(
       new Error("ENOENT: no such file or directory")
     );
   }

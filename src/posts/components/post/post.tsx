@@ -1,8 +1,11 @@
+import { renderImage } from "@/posts/renderers/image";
 import { PostModel } from "@/posts/service/types";
+import { Card } from "@/shared/components/card/card";
+import { FC } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Card } from "@/shared/components/card/card";
 import {
+  ExternalAnchorTag,
   MainHeading,
   OrderedList,
   ParagraphText,
@@ -11,8 +14,6 @@ import {
   getRendererFor,
 } from "../../renderers/text";
 import styles from "./post.module.scss";
-import { renderImage } from "@/posts/renderers/image";
-import { FC } from "react";
 
 interface PostProps {
   post: PostModel;
@@ -32,6 +33,7 @@ export const Post: FC<PostProps> = ({ post, renderContentBefore }) => {
           h2: getRendererFor(SecondaryHeading),
           h3: getRendererFor(ThirdLevelHeading),
           ol: getRendererFor(OrderedList),
+          a: getRendererFor(ExternalAnchorTag),
           img: (node) => renderImage(node, styles.image),
         }}
       >
