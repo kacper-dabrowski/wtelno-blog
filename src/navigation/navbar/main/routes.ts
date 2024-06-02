@@ -1,6 +1,7 @@
 export const routes = [
   { title: "Aktualności", href: "/aktualnosci" },
   { title: "Galeria", href: "/galeria" },
+  { title: "Historia", href: "/historia" },
   { title: "Regualmin cmentarza", href: "/regulamin-cmentarza" },
   { title: "Parafia", href: "/parafia", hasSubpages: true },
   {
