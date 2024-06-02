@@ -1,7 +1,7 @@
 ---
 title: "Historia"
 createdAt: "2023-04-27"
-slug: "parafia"
+slug: "historia"
 ---
 
 ### Tryszczyn 1939
