@@ -22,6 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={font.className}>
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
       <body>
         <MainNavbar />
         {children}
