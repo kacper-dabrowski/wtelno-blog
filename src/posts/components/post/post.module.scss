@@ -4,5 +4,9 @@
 
 .image {
   display: block;
+  width: 100%;
   margin: 1rem auto;
+  @media (width >= 500px) {
+    width: initial;
+  }
 }
