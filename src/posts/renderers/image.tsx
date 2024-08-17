@@ -11,12 +11,14 @@ export const renderImage = (imageNode: any, classes?: string) => {
   } = imageNode as ImageNode;
 
   return (
-    <Image
-      width={properties!.width}
-      height={properties!.height}
-      src={properties!.src}
-      alt={properties!.alt}
-      className={classes}
-    />
+    <div>
+      <Image
+        width={properties!.width}
+        height={properties!.height}
+        src={properties!.src}
+        alt={properties!.alt}
+        className={classes}
+      />
+    </div>
   );
 };
