@@ -49,6 +49,12 @@ export const OrderedList: FC<WithChildren<WithAdditionalClasses>> = ({
   return <ol className={styles["ordered-list"]}>{children}</ol>;
 };
 
+export const UnorderedList: FC<WithChildren<WithAdditionalClasses>> = ({
+  children,
+}) => {
+  return <ul className={styles["unordered-list"]}>{children}</ul>;
+};
+
 export const ExternalAnchorTag: FC<PropsWithChildren> = ({
   children,
   ...props
