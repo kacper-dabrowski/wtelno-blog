@@ -11,6 +11,7 @@ import {
   ParagraphText,
   SecondaryHeading,
   ThirdLevelHeading,
+  UnorderedList,
   getRendererFor,
 } from "../../renderers/text";
 import styles from "./post.module.scss";
@@ -34,6 +35,7 @@ export const Post: FC<PostProps> = ({ post, renderContentBefore }) => {
           h3: getRendererFor(ThirdLevelHeading),
           ol: getRendererFor(OrderedList),
           a: getRendererFor(ExternalAnchorTag),
+          ul: getRendererFor(UnorderedList),
           img: (node) => renderImage(node, styles.image),
         }}
       >
