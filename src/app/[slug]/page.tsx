@@ -1,7 +1,6 @@
 import { Post } from "@/posts/components/post/post";
-import { pageService } from "@/posts/service/postService";
-import { getSlugsFromService } from "@/shared/params/getSlugsFromService";
 import { notFound } from "next/navigation";
+import { getAllTabs, getPageBySlug } from "../../content/contentful";
 
 interface PageProps {
   params: {
@@ -9,12 +8,14 @@ interface PageProps {
   };
 }
 
-export async function generateStaticParams() {
-  return getSlugsFromService(pageService);
-}
+export const generateStaticParams = async () => {
+  const tabs = await getAllTabs();
+
+  return tabs.filter(Boolean).map((tab) => ({ slug: tab?.pathname }));
+};
 
 const Page = async ({ params }: PageProps) => {
-  const post = await pageService.getPostBySlug(decodeURIComponent(params.slug));
+  const post = await getPageBySlug(decodeURIComponent(params.slug));
 
   return post ? <Post post={post} /> : notFound();
 };

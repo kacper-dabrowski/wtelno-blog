@@ -1,7 +1,6 @@
 import { Post } from "@/posts/components/post/post";
-import { newsService } from "@/posts/service/postService";
-import { getSlugsFromService } from "@/shared/params/getSlugsFromService";
 import { notFound } from "next/navigation";
+import { getPostBySlug, getPostPreviews } from "../../../content/contentful";
 
 interface PageProps {
   params: {
@@ -10,11 +9,13 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return getSlugsFromService(newsService);
+  const posts = await getPostPreviews();
+
+  return posts.map((post) => ({ slug: post.pathname }));
 }
 
 const Page = async ({ params }: PageProps) => {
-  const post = await newsService.getPostBySlug(decodeURIComponent(params.slug));
+  const post = await getPostBySlug(decodeURIComponent(params.slug));
 
   return post ? <Post post={post} /> : notFound();
 };
