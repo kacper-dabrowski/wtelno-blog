@@ -200,6 +200,7 @@ W naszej parafii osobą pierwszego kontaktu jest:<br/>
 <b>Bolesław Grygorewicz</b><br/>
 <b>Tel. 728 808 470</b><br/>
 <b>Adres e-mail: bgrygorewicz@wp.pl</b><br/>
+
 - **Osoba odpowiedzialna za standardy** troszczy się o to, aby standardy były w parafii znane, wdrażane i przestrzegane. Każda odrębna grupa parafialna, np. ministranci, może wyznaczyć własną taką osobę.
 - **Osoba zaufana** powołana jest do przyjmowania zgłoszeń w przypadku naruszenia standardów lub zaistnienia incydentów przemocy. Musi to być osoba faktycznie budząca zaufanie, odpowiednio przygotowana oraz posiadająca tzw. kompetencje miękkie, predysponujące ją do kontaktu z osobami skrzywdzonymi. Nie może ona na własną rękę podejmować działań służących wyjaśnieniu podejrzeń i zarzutów lub weryfikacji zgłaszanych faktów. Współpracuje ściśle z osobą odpowiedzialną za interwencję. Osoby te zobowiązane są do zachowania poufności (**Załącznik 4**).
 - Z zasady **osobą odpowiedzialną za interwencję** w przypadku podejrzenia lub zaistnienia przemocy jest zarządca placówki, czyli w tym wypadku proboszcz parafii, może on jednak delegować do tego zadania kompetentną osobę.
