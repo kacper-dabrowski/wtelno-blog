@@ -25,7 +25,6 @@ W naszej parafii trwają wizyty duszpasterskie zwane – Kolędą. Jest to bardz
 - 24.01 piątek, od g. 13:00 Tryszczyn (Doły – elektrownia) – Długa, Jałowcowa, Jodłowa, Sosnowa, Kąpielowa, Nizinna, Piaskowa, Rekreacyjna, Słoneczna, Bajkowa, Pogodna.
 - 25.01 sobota, od g. 12:00 Tryszczyn – „Kolonia” ul. Bydgoska, Ks. Jana Hamerskiego, Polna.
 - 27.01 poniedziałek, od g. 13:00 Tryszczyn Osiedle 2, ul.: Świerkowa, Jaworowa, Lipowa, Modrzewiowa, Krótka, Akacjowa 2, 4, 8.
-- 27.01. poniedziałek od g. 13:00, Tryszczyn Osiedle 2, ul.: Świerkowa, Jaworowa, Lipowa, Modrzewiowa, Krótka, Akacjowa 2,4,8.
 - 28.01. wtorek - g. 13:00 Wtelno ul. Stawowa od nr 1.
 - 29.01. środa g. 13:00 Wtelno (od p. Bałdowskiej) ul. L. Wyczółkowskiego 35,33,31, i ul. Akacjowa do 17.
 - 30.01. czwartek g. 13:00 Wtelno (od p. Kolankowskich do p. Hartwich), ul. Dworcowa, Spokojna, Piękna, Kasztanowa.
