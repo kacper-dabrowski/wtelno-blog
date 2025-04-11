@@ -1,7 +1,6 @@
 ---
 title: "Plan kolędy 2025"
-createdAt: "12-01-2025"
-slug: "plan-koledy-2025"
+createdAt: "12-01-2024"
 ---
 
 W naszej parafii trwają wizyty duszpasterskie zwane – Kolędą. Jest to bardzo ważne wydarzenie i potrzebne dla rodzin i osób naszej wspólnoty parafialnej, jak i duszpasterza, ponieważ kapłan udziela Bożego błogosławieństwa wierzącym katolikom, aby mieć żywą łączność z Parafią i z Kościołem. Plan Kolędy jest już zamieszczony w gablotce ogłoszeń i na stronie internetowej naszej Parafii wtelno.info. – Plan na bieżące dni będzie podawany podczas ogłoszeń parafialnych. Proszę o zorganizowanie pojazdu na poszczególne dni kolędowe i serdecznie dziękuję za okazaną pomoc i życzliwość.

@@ -1,7 +1,6 @@
 ---
 title: "Zapytanie ofertowe"
 createdAt: "2024-05-15"
-slug: "zapytanie-ofertowe"
 ---
 
 W ramach postępowania zakupowego na wybór wykonawcy zadania p.n.:

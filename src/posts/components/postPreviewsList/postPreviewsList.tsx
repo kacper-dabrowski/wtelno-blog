@@ -12,11 +12,15 @@ export const PostPreviewList: FC<PostPreviewListProps> = ({
   posts,
   baseUrl,
 }) => {
-  return (
-    <div className={styles.container}>
-      {posts.map((post) => (
-        <SinglePostPreview post={post} key={post.title} baseUrl={baseUrl} />
-      ))}
-    </div>
-  );
+  const sortedPosts = posts
+    .sort(descendingByDate)
+    .map((post) => (
+      <SinglePostPreview post={post} key={post.title} baseUrl={baseUrl} />
+    ));
+
+  return <div className={styles.container}>{sortedPosts}</div>;
 };
+
+function descendingByDate(a: PostPreviewModel, b: PostPreviewModel): number {
+  return b.createdAt.getTime() - a.createdAt.getTime();
+}
