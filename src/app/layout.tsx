@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./globals.scss";
 import { MainNavbar } from "@/navigation/navbar/main/mainNavbar";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Wtelno - Oficjalna strona wsi Wtelno",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <MainNavbar />
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }
